@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class autoClickerMainClass implements ActionListener{
 
-	
+	//initialize all the variables
 	static boolean rightOrLeftClick = true; //true is left click, false is right click
 	static JFrame jframe = new JFrame();
 	static JPanel panel = new JPanel();
@@ -18,12 +18,13 @@ public class autoClickerMainClass implements ActionListener{
 	static JButton jbutton2 = new JButton("Right Click");
 	
 	
-	
+	//run the method for all the jframe components
 	public static void main(String[] args) {
 	
 		new autoClickerMainClass();
 		
 	}
+	//initialize jframe components visible and then add them to their respective panels/jframes
 	autoClickerMainClass(){
 		jframe.setVisible(true);
 		panel.setVisible(true);
@@ -33,6 +34,7 @@ public class autoClickerMainClass implements ActionListener{
 	    jbutton1.addActionListener(this);
 	}
 	@Override
+	//Start The autoclicker for 15 seconds of 30cps clicking as well as making the robot object
 	public void actionPerformed(ActionEvent e) {
 		rightOrLeftClick = true;
 		Robot bot;
